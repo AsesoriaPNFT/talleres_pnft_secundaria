@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Mediación - Taller 1 de 4 | Formación Tecnológica 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
@@ -55,6 +55,9 @@
 
         .resumen-card { background: #ffffff; border: 1px solid #e6edf2; padding: 1rem; border-radius: 0.75rem; }
         .small-muted { font-size: 0.8rem; color: #6b7280; }
+
+        .nav-btn.step-active { border-left: 4px solid #008080; background-color: #f0fdfa; }
+        .workshop-btn.step-active { border-left: 4px solid #008080; background-color: #f0fdfa; }
     </style>
 </head>
 <body class="text-slate-800">
@@ -109,6 +112,94 @@
                 <!-- Taller 1: mantiene el contenido existente (incluye navegación interna) -->
                 <div id="taller1" class="workshop-content active">
 
+                    <!-- RESUMEN PREVIO - Día 1 (insertado) -->
+                    <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+                      <h2 class="font-bold text-lg text-mep-teal">Resumen previo a la reunión — Día 1</h2>
+
+                      <div class="mt-4 text-sm space-y-4">
+                        <p class="italic small-muted">Resumen de los puntos medulares que el mediador comparte antes de iniciar la jornada del Taller 1.</p>
+
+                        <section>
+                          <h3 class="font-semibold">1. La Filosofía del Mediador: "Comprender para Orientar"</h3>
+                          <ul class="list-disc ml-5 mt-2">
+                            <li>Frase clave de Eduardo: <strong>"No podemos desarrollar un currículo que no comprendemos"</strong>.</li>
+                            <li><strong>Empatía Profesional:</strong> El mediador reconoce que el docente puede venir de vacaciones o de un proceso electoral; la intención es <em>inspirar</em> más que sólo instruir.</li>
+                            <li><strong>El Rol del Asesor:</strong> No es un calificador sino un facilitador. Herramientas como el "Registro de dudas" o el trabajo en parejas permiten que el asesor experimente lo que el docente vivirá.</li>
+                            <li><strong>Humanización de la Tecnología:</strong> Aunque el programa es de informática, el centro es la pedagogía y la emoción.</li>
+                          </ul>
+                        </section>
+
+                        <section>
+                          <h3 class="font-semibold">2. El Ecosistema de Recursos (La "Trinidad" Pedagógica)</h3>
+                          <p class="mt-2">El mediador debe dominar la interacción entre tres recursos que funcionan en conjunto:</p>
+                          <table class="w-full text-sm border-collapse mt-2">
+                            <thead>
+                              <tr>
+                                <th class="text-left font-semibold pb-2">Recurso</th>
+                                <th class="text-left font-semibold pb-2">Función para el Mediador</th>
+                                <th class="text-left font-semibold pb-2">Propósito con el Docente</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td class="pt-1 align-top"><strong>Guía del Mediador</strong></td>
+                                <td class="pt-1 align-top">Es el guion técnico; indica qué decir en cada diapositiva y cuánto tiempo dedicar.</td>
+                                <td class="pt-1 align-top">Asegura que el mensaje sea estandarizado en todo el país.</td>
+                              </tr>
+                              <tr>
+                                <td class="pt-1 align-top"><strong>Presentación (PPT)</strong></td>
+                                <td class="pt-1 align-top">Brújula visual con consignas y momentos de enganche.</td>
+                                <td class="pt-1 align-top">Mantiene la atención y marca el ritmo del taller.</td>
+                              </tr>
+                              <tr>
+                                <td class="pt-1 align-top"><strong>Recurso Interactivo</strong></td>
+                                <td class="pt-1 align-top">Es el laboratorio donde está la información técnica y lúdica.</td>
+                                <td class="pt-1 align-top">Permite al docente explorar de forma autónoma y lúdica.</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </section>
+
+                        <section>
+                          <h3 class="font-semibold">3. Estrategias de "Enganche" y Neuroeducación</h3>
+                          <ul class="list-disc ml-5 mt-2">
+                            <li><strong>Analogía de la Jardinería:</strong> Explica cómo aprendemos y enseñamos: no basta con "sembrar" contenido; hay que cuidar el entorno.</li>
+                            <li><strong>Juegos Tradicionales (Trompos, Jackses):</strong> Herramienta clave para ejemplificar las tres dimensiones de una competencia:
+                              <ul class="list-disc ml-5">
+                                <li><strong>Saber:</strong> conocer las reglas.</li>
+                                <li><strong>Saber Hacer:</strong> la habilidad práctica.</li>
+                                <li><strong>Saber Ser:</strong> la actitud frente al juego.</li>
+                              </ul>
+                            </li>
+                            <li><strong>Química del Aprendizaje:</strong> La actitud del mediador influye en la producción de dopamina/serotonina/adrenalina; un mediador "apagado" no logra el clic cognitivo.</li>
+                          </ul>
+                        </section>
+
+                        <section>
+                          <h3 class="font-semibold">4. Desglose del Recorrido Curricular (Día 2 al 5)</h3>
+                          <p class="mt-2">Ruta lógica comunicada por el mediador para evitar sobrecarga informativa:</p>
+                          <ul class="list-disc ml-5 mt-2">
+                            <li><strong>Antecedentes (La Historia):</strong> Entender que el PNFT es resultado de decisiones institucionales previas.</li>
+                            <li><strong>Macro-Currículo (El Sentido):</strong> Enfocado en el "para qué" (competencias y fundamentos).</li>
+                            <li><strong>Micro-Currículo (La Acción):</strong> Indicadores de logro y Resultados de Aprendizaje (REDA).</li>
+                            <li><strong>Módulos (La Estructura):</strong> No son solo temas; son la coherencia del semestre.</li>
+                            <li><strong>Planeamiento (El Cierre):</strong> Aterriza el jueves con la plantilla oficial y exploración opcional de la herramienta PIE.</li>
+                          </ul>
+                        </section>
+
+                        <section>
+                          <h3 class="font-semibold">5. La Experiencia Administrativa y Logística</h3>
+                          <ul class="list-disc ml-5 mt-2">
+                            <li><strong>Respeto por el Tiempo:</strong> Sesiones de 2 horas exactas (7:30-9:30 primaria / 10:00-12:00 secundaria).</li>
+                            <li><strong>Grabaciones con Propósito:</strong> Se graba por respaldo para quienes no pudieron asistir.</li>
+                            <li><strong>Evaluación Formativa:</strong> Uso de H5P, Kahoot y Padlet para autoevaluación sin miedo al error.</li>
+                            <li><strong>Nota del Mediador:</strong> El viernes no es relleno: el Conversatorio devuelve las dudas recolectadas durante la semana, cerrando el ciclo por región.</li>
+                          </ul>
+                        </section>
+                      </div>
+                    </div>
+                    <!-- /RESUMEN PREVIO - Día 1 -->
+
                     <!-- Sidebar Navigation (interna) - Ruta del Taller para Taller 1 -->
                     <aside class="lg:w-full mb-6">
                         <div class="bg-white rounded-xl shadow-md overflow-hidden">
@@ -149,7 +240,7 @@
                         <div class="flex items-center gap-3">
                             <div id="timer-display" class="text-2xl font-mono font-bold text-slate-700">10:00</div>
                             <button onclick="toggleTimer()" id="timer-btn" class="bg-slate-800 text-white px-4 py-2 rounded-lg hover:bg-slate-700 transition">
-                                <i class="fas fa-play"></i>
+                                <i id="timer-icon" class="fas fa-play"></i>
                             </button>
                             <button onclick="resetTimer()" class="bg-slate-200 text-slate-600 px-4 py-2 rounded-lg hover:bg-slate-300 transition">
                                 <i class="fas fa-undo"></i>
@@ -293,7 +384,7 @@
                                         </div>
                                         <div class="bg-purple-900 text-white p-4 rounded-xl flex flex-col justify-center items-center gap-3">
                                             <span class="text-xs uppercase tracking-widest opacity-80">Link de Actividad</span>
-                                            <a href="https://padlet.com/albustor/clon-de-competencias-yamila-alberto-et67ccuqphiha21s" target="_blank" class="bg-white text-purple-900 px-4 py-2 rounded font-bold text-sm hover:bg-purple-100 transition">IR AL PADLET</a>
+                                            <a href="https://padlet.com/albustor/clon-de-competencias-yamila-alberto-et67ccuqphiha21s" target="_blank" class="bg-white text-purple-900 px-4 py-2 rounded">IR A PADLET</a>
                                         </div>
                                     </div>
                                 </div>
@@ -395,4 +486,327 @@
                     <div id="cierre" class="tab-content space-y-6">
                         <div class="bg-white rounded-xl shadow-md p-8">
                             <div class="flex items-center gap-4 mb-6">
-                                <div class="p-3 bg-emerald-100 rounded-lg text-emerald-700"><i class="fas fa-check-double*
+                                <div class="p-3 bg-emerald-100 rounded-lg text-emerald-700"><i class="fas fa-check-double fa-2x"></i></div>
+                                <div>
+                                    <h2 class="text-2xl font-bold text-emerald-900">Cierre y Síntesis</h2>
+                                    <p class="text-slate-500 italic">Recapitulación, dudas y pasos siguientes.</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-4">
+                                <p class="text-sm">Se recomienda recoger dudas en el "Registro de dudas" y reservar el conversatorio del viernes para devolver respuestas por región.</p>
+
+                                <div class="resumen-card">
+                                    <label class="font-semibold">Resumen - Cierre</label>
+                                    <p class="small-muted mb-2">Notas finales, acuerdos y próximos pasos.</p>
+                                    <textarea id="resumen_taller1_cierre" class="resumen-area" placeholder="Escribe aquí tu resumen..."></textarea>
+                                    <div class="mt-3 flex gap-2">
+                                        <button class="bg-mep-teal text-white px-3 py-1 rounded" onclick="saveSummary('taller1','cierre')"><i class="fas fa-save mr-2"></i>Guardar</button>
+                                        <button class="bg-slate-200 px-3 py-1 rounded" onclick="clearSummary('taller1','cierre')"><i class="fas fa-trash mr-2"></i>Borrar</button>
+                                        <span id="count_taller1_cierre" class="small-muted ml-auto"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /Taller 1 -->
+
+                <!-- -----------------------------------------------------------
+                     TALLER 2 - Resumen previo a la reunión (insertado como hermano)
+                     ----------------------------------------------------------- -->
+                <div id="taller2" class="workshop-content" style="display:none;">
+                  <div class="bg-white rounded-xl shadow-md p-6 mb-6">
+                    <h2 class="font-bold text-lg text-mep-blue">Resumen previo a la reunión — Taller 2 (Día 2)</h2>
+
+                    <div class="mt-4 text-sm space-y-4">
+                      <p class="italic small-muted">Resumen de los puntos medulares del Día 3 de la jornada de formación (profundización en evaluación y operatividad pedagógica).</p>
+
+                      <section>
+                        <h3 class="font-semibold">1. El Gran Diferenciador: Macro vs. Micro Currículo</h3>
+                        <p class="mt-2">Cuadro comparativo esencial para explicar las diferencias:</p>
+                        <table class="w-full text-sm border-collapse mt-2">
+                          <thead>
+                            <tr>
+                              <th class="text-left font-semibold pb-2">Característica</th>
+                              <th class="text-left font-semibold pb-2">Macro Currículo</th>
+                              <th class="text-left font-semibold pb-2">Micro Currículo</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td class="pt-1 align-top"><strong>Definición</strong></td>
+                              <td class="pt-1 align-top">Lo mayor: sistema e institución.</td>
+                              <td class="pt-1 align-top">Lo que se lleva al aula: implementación docente.</td>
+                            </tr>
+                            <tr>
+                              <td class="pt-1 align-top"><strong>Plazo</strong></td>
+                              <td class="pt-1 align-top">Largo plazo (ciclo).</td>
+                              <td class="pt-1 align-top">Corto plazo (clase/bimestre).</td>
+                            </tr>
+                            <tr>
+                              <td class="pt-1 align-top"><strong>Elementos</strong></td>
+                              <td class="pt-1 align-top">Define competencias y Resultados de Aprendizaje (RdA).</td>
+                              <td class="pt-1 align-top">Traduce los RdA en actividades y evaluación.</td>
+                            </tr>
+                            <tr>
+                              <td class="pt-1 align-top"><strong>Responsable</strong></td>
+                              <td class="pt-1 align-top">Autoridades (malla curricular/programa).</td>
+                              <td class="pt-1 align-top">Docente (planeamiento y módulos).</td>
+                            </tr>
+                            <tr>
+                              <td class="pt-1 align-top"><strong>Producto</strong></td>
+                              <td class="pt-1 align-top">Programa de estudio.</td>
+                              <td class="pt-1 align-top">Planeamiento didáctico.</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </section>
+
+                      <section>
+                        <h3 class="font-semibold">2. Evaluación: De la Técnica a la Evidencia</h3>
+                        <ul class="list-disc ml-5 mt-2">
+                          <li>El mediador enseña a comprender para qué se evalúa, no solo a construir rúbricas mecánicas.</li>
+                          <li><strong>La Meta Volante:</strong> Analogía del ciclismo: RdA = meta final; Indicadores de Logro = metas parciales.</li>
+                          <li><strong>Indicador vs. Evaluación:</strong> El indicador orienta el qué; la evaluación operacionaliza el cómo se evidencia.</li>
+                          <li>Evaluar implica decidir qué saber moviliza el estudiante, qué acción observable se pedirá y qué producto mostrará progreso.</li>
+                        </ul>
+                      </section>
+
+                      <section>
+                        <h3 class="font-semibold">3. Los Módulos: El Mapa del Semestre</h3>
+                        <ul class="list-disc ml-5 mt-2">
+                          <li>Estructura semestral: 2 módulos por año (Módulo 1 primer semestre, Módulo 2 segundo semestre).</li>
+                          <li>Carga de planeamiento: 4 planeamientos bimestrales al año (2 por módulo).</li>
+                          <li>Componentes del módulo: descripción, áreas de conocimiento, RdA, saberes (conceptuales/procedimentales/actitudinales), metodología y evaluación.</li>
+                        </ul>
+                      </section>
+
+                      <section>
+                        <h3 class="font-semibold">4. La Experiencia del Mediador: "El Arte de Convencer"</h3>
+                        <ul class="list-disc ml-5 mt-2">
+                          <li><strong>Meta-cognición:</strong> El mediador debe preguntarse primero: "¿Qué estoy entendiendo? ¿Qué me falta afinar?".</li>
+                          <li><strong>Neuroeducación y Emoción:</strong> Usar analogías (videojuegos, deporte) para conectar saber y gusto; un participante enganchado indaga por sí mismo.</li>
+                          <li><strong>Ojo al Verbo:</strong> Respetar el nivel de complejidad del indicador (si el verbo es "Reconocer", no exigir "Aplicar").</li>
+                          <li><strong>IA como Aliada:</strong> Promover su uso para redactar indicadores o actividades, siempre supervisada por criterio docente.</li>
+                        </ul>
+                      </section>
+
+                      <section>
+                        <h3 class="font-semibold">5. Dinámica de Trabajo y Cierre</h3>
+                        <p class="mt-2">Se recomienda mantener los mismos equipos de docentes durante los tres días para que el trabajo sea progresivo: el análisis de hoy alimenta el planeamiento de mañana.</p>
+                      </section>
+                    </div>
+                  </div>
+                </div>
+                <!-- /Taller 2 -->
+
+            </section>
+        </div>
+    </main>
+
+    <footer class="container mx-auto text-center text-sm text-slate-500 pb-8">
+        © PNFT - Formación Tecnológica 2026
+    </footer>
+
+    <script>
+      /****************************************************************
+       * UI: showWorkshop & internal tabs
+       ****************************************************************/
+      function showWorkshop(id) {
+        document.querySelectorAll('.workshop-content').forEach(el => {
+          el.classList.remove('active');
+          el.style.display = 'none';
+        });
+        document.querySelectorAll('.workshop-btn').forEach(b => b.classList.remove('step-active'));
+        const target = document.getElementById(id);
+        if (target) {
+          target.classList.add('active');
+          target.style.display = 'block';
+        }
+        const btn = document.getElementById('btn-' + id);
+        if (btn) btn.classList.add('step-active');
+      }
+
+      function showInternalTab(tabId) {
+        // hide all tabs
+        document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('step-active'));
+        const tab = document.getElementById(tabId);
+        if (tab) tab.classList.add('active');
+        const btn = document.getElementById('btn-' + tabId);
+        if (btn) btn.classList.add('step-active');
+
+        // update section name and reset timer for the example
+        const sectionName = document.getElementById('section-name');
+        if (sectionName) {
+          sectionName.textContent = btn ? btn.innerText.trim() : tabId;
+        }
+
+        // Optionally set different default times per tab
+        // as example:
+        const timerDisplay = document.getElementById('timer-display');
+        if (timerDisplay) {
+          switch(tabId) {
+            case 'apertura': timerSetSeconds = 10*60; break;
+            case 'antecedentes': timerSetSeconds = 12*60; break;
+            case 'competencias': timerSetSeconds = 15*60; break;
+            case 'estructura': timerSetSeconds = 18*60; break;
+            case 'cierre': timerSetSeconds = 8*60; break;
+            default: timerSetSeconds = 10*60;
+          }
+          resetTimer(true);
+        }
+      }
+
+      /****************************************************************
+       * Simple Timer Implementation
+       ****************************************************************/
+      let timerInterval = null;
+      let timerSetSeconds = 10*60; // default 10 minutes
+      let timerRemaining = timerSetSeconds;
+
+      const displayEl = () => document.getElementById('timer-display');
+
+      function formatTime(sec) {
+        const mm = Math.floor(sec/60).toString().padStart(2,'0');
+        const ss = (sec%60).toString().padStart(2,'0');
+        return mm + ':' + ss;
+      }
+
+      function toggleTimer() {
+        const icon = document.getElementById('timer-icon');
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+          if (icon) { icon.className = 'fas fa-play'; }
+          displayEl().classList.remove('timer-flash');
+        } else {
+          timerInterval = setInterval(() => {
+            timerRemaining--;
+            if (timerRemaining <= 0) {
+              clearInterval(timerInterval);
+              timerInterval = null;
+              displayEl().classList.remove('timer-flash');
+              displayEl().textContent = '00:00';
+              if (icon) icon.className = 'fas fa-bell';
+              return;
+            }
+            displayEl().textContent = formatTime(timerRemaining);
+            if (timerRemaining <= 30) {
+              displayEl().classList.add('timer-flash');
+            }
+          }, 1000);
+          if (icon) icon.className = 'fas fa-pause';
+        }
+      }
+
+      function resetTimer(skipDisplayUpdate) {
+        timerRemaining = timerSetSeconds;
+        if (!skipDisplayUpdate) {
+          const icon = document.getElementById('timer-icon');
+          if (icon) icon.className = 'fas fa-play';
+        }
+        if (displayEl()) displayEl().textContent = formatTime(timerRemaining);
+        if (timerInterval) {
+          clearInterval(timerInterval);
+          timerInterval = null;
+        }
+        displayEl().classList.remove('timer-flash');
+      }
+
+      /****************************************************************
+       * Summary save/clear (localStorage-backed)
+       ****************************************************************/
+      function storageKey(taller, section) {
+        return `pnft:${taller}:${section}:summary`;
+      }
+
+      function saveSummary(taller, section) {
+        const id = `resumen_${taller}_${section}`;
+        const el = document.getElementById(id);
+        if (!el) {
+          // fallback: try older id pattern used in page
+          const alt = `resumen_${taller}_${section}`;
+        }
+        const value = el ? el.value : '';
+        localStorage.setItem(storageKey(taller, section), value);
+        updateCountDisplay(taller, section);
+        flashSaved(el);
+      }
+
+      function clearSummary(taller, section) {
+        const id = `resumen_${taller}_${section}`;
+        const el = document.getElementById(id);
+        if (el) el.value = '';
+        localStorage.removeItem(storageKey(taller, section));
+        updateCountDisplay(taller, section);
+      }
+
+      function loadAllSummaries() {
+        const textareas = document.querySelectorAll('textarea[id^="resumen_"]');
+        textareas.forEach(t => {
+          // ids in the page are like resumen_taller1_apertura or resumen_taller1_antecedentes
+          const idParts = t.id.split('_');
+          // expected format: resumen, taller1, apertura
+          if (idParts.length >= 3) {
+            const taller = idParts[1];
+            const section = idParts.slice(2).join('_');
+            const stored = localStorage.getItem(storageKey(taller, section));
+            if (stored) t.value = stored;
+            updateCountDisplay(taller, section);
+          }
+        });
+      }
+
+      function updateCountDisplay(taller, section) {
+        const id = `resumen_${taller}_${section}`;
+        const el = document.getElementById(id);
+        const countEl = document.getElementById(`count_${taller}_${section}`);
+        if (el && countEl) {
+          const len = el.value.trim().length;
+          countEl.textContent = len ? `${len} caracteres` : '';
+        }
+      }
+
+      function flashSaved(el) {
+        if (!el) return;
+        const original = el.style.boxShadow;
+        el.style.boxShadow = '0 0 0 3px rgba(0,128,128,0.12)';
+        setTimeout(() => el.style.boxShadow = original, 800);
+      }
+
+      // Update counts on input
+      document.addEventListener('input', (e) => {
+        if (e.target && e.target.tagName === 'TEXTAREA' && e.target.id.startsWith('resumen_')) {
+          const idParts = e.target.id.split('_');
+          if (idParts.length >= 3) {
+            const taller = idParts[1];
+            const section = idParts.slice(2).join('_');
+            updateCountDisplay(taller, section);
+          }
+        }
+      });
+
+      // Initialize UI on load
+      document.addEventListener('DOMContentLoaded', () => {
+        // set initial active states for navs
+        document.querySelectorAll('.workshop-btn').forEach(b => b.classList.remove('step-active'));
+        const defaultWorkshopBtn = document.getElementById('btn-taller1');
+        if (defaultWorkshopBtn) defaultWorkshopBtn.classList.add('step-active');
+
+        document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('step-active'));
+        const defaultNavBtn = document.getElementById('btn-apertura');
+        if (defaultNavBtn) defaultNavBtn.classList.add('step-active');
+
+        // set timer display initial
+        resetTimer();
+
+        // load saved summaries
+        loadAllSummaries();
+      });
+
+    </script>
+</body>
+</html>
