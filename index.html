@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mediación Día 2 - Formación Tecnológica 2026</title>
+    <title>Mediación - Taller 1 de 4 | Formación Tecnológica 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
@@ -38,6 +38,10 @@
 
         .macro-card { border-top: 4px solid #008080; }
         .micro-card { border-top: 4px solid #f97316; }
+
+        /* Workshop-level visibility */
+        .workshop-content { display: none; }
+        .workshop-content.active { display: block; }
     </style>
 </head>
 <body class="text-slate-800">
@@ -46,8 +50,8 @@
     <header class="mep-teal text-white p-6 shadow-lg">
         <div class="container mx-auto flex flex-col md:flex-row justify-between items-center">
             <div>
-                <h1 class="text-2xl font-bold text-white">Día 2: Del recorrido histórico a la comprensión del currículo</h1>
-                <p class="text-sm opacity-90">Taller: Recorriendo el camino de Formación Tecnológica: del currículo al planeamiento</p>
+                <h1 class="text-2xl font-bold text-white">Taller 1 de 4: Del recorrido histórico a la comprensión del currículo</h1>
+                <p class="text-sm opacity-90">Serie de talleres: Recorriendo el camino de Formación Tecnológica: del currículo al planeamiento</p>
             </div>
             <div class="text-right mt-4 md:mt-0">
                 <p class="font-semibold">Mediadores: Alberto & Yamila</p>
@@ -56,286 +60,354 @@
         </div>
     </header>
 
-    <main class="container mx-auto mt-8 px-4 flex flex-col lg:flex-row gap-8 pb-20">
-        
-        <!-- Sidebar Navigation -->
-        <aside class="lg:w-1/4">
-            <div class="bg-white rounded-xl shadow-md overflow-hidden sticky top-8">
-                <div class="p-4 bg-slate-100 border-b border-slate-200">
-                    <h2 class="font-bold text-slate-600 uppercase text-xs tracking-wider">Ruta del Taller</h2>
-                </div>
-                <nav class="flex flex-col">
-                    <button onclick="showTab('apertura')" id="btn-apertura" class="nav-btn p-4 text-left border-b hover:bg-slate-50 transition flex items-center gap-3">
-                        <i class="fas fa-door-open text-mep-teal"></i>
-                        <span>Apertura y Recursos</span>
-                    </button>
-                    <button onclick="showTab('antecedentes')" id="btn-antecedentes" class="nav-btn p-4 text-left border-b hover:bg-slate-50 transition flex items-center gap-3">
-                        <i class="fas fa-history text-mep-teal"></i>
-                        <span>Antecedentes</span>
-                    </button>
-                    <button onclick="showTab('competencias')" id="btn-competencias" class="nav-btn p-4 text-left border-b hover:bg-slate-50 transition flex items-center gap-3">
-                        <i class="fas fa-brain text-mep-teal"></i>
-                        <span>Competencias</span>
-                    </button>
-                    <button onclick="showTab('estructura')" id="btn-estructura" class="nav-btn p-4 text-left border-b hover:bg-slate-50 transition flex items-center gap-3">
-                        <i class="fas fa-sitemap text-mep-teal"></i>
-                        <span>Estructura Curricular</span>
-                    </button>
-                    <button onclick="showTab('cierre')" id="btn-cierre" class="nav-btn p-4 text-left hover:bg-slate-50 transition flex items-center gap-3">
-                        <i class="fas fa-flag-checkered text-mep-teal"></i>
-                        <span>Cierre y Síntesis</span>
-                    </button>
-                </nav>
-            </div>
-        </aside>
+    <main class="container mx-auto mt-8 px-4 gap-8 pb-20">
 
-        <!-- Main Content Area -->
-        <section class="lg:w-3/4">
-            
-            <!-- Global Timer -->
-            <div class="bg-white rounded-xl shadow-sm p-4 mb-6 flex justify-between items-center border border-slate-200">
-                <div class="flex items-center gap-4">
-                    <span class="text-sm font-semibold text-slate-500 uppercase">Sección actual:</span>
-                    <span id="section-name" class="font-bold text-mep-teal">Apertura</span>
-                </div>
-                <div class="flex items-center gap-3">
-                    <div id="timer-display" class="text-2xl font-mono font-bold text-slate-700">10:00</div>
-                    <button onclick="toggleTimer()" id="timer-btn" class="bg-slate-800 text-white px-4 py-2 rounded-lg hover:bg-slate-700 transition">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    <button onclick="resetTimer()" class="bg-slate-200 text-slate-600 px-4 py-2 rounded-lg hover:bg-slate-300 transition">
-                        <i class="fas fa-undo"></i>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Tab: Apertura -->
-            <div id="apertura" class="tab-content active space-y-6">
-                <div class="bg-white rounded-xl shadow-md p-8">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="p-3 bg-teal-100 rounded-lg text-mep-teal"><i class="fas fa-handshake fa-2x"></i></div>
-                        <div>
-                            <h2 class="text-2xl font-bold">A. Apertura y Recursos</h2>
-                            <p class="text-slate-500 italic">Objetivo: Comprender la evolución y consolidación del macro y micro currículo del PNFT.</p>
-                        </div>
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Top-level Workshop Navigation (Left column) -->
+            <aside class="lg:w-1/4">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden sticky top-8">
+                    <div class="p-4 bg-slate-100 border-b border-slate-200">
+                        <h2 class="font-bold text-slate-600 uppercase text-xs tracking-wider">Talleres (seleccione)</h2>
                     </div>
+                    <nav class="flex flex-col">
+                        <button onclick="showWorkshop('taller1')" id="btn-taller1" class="workshop-btn p-4 text-left border-b hover:bg-slate-50 transition flex items-center gap-3">
+                            <i class="fas fa-chalkboard-teacher text-mep-teal"></i>
+                            <span>Taller 1 (actual)</span>
+                        </button>
+                        <button onclick="showWorkshop('taller2')" id="btn-taller2" class="workshop-btn p-4 text-left border-b hover:bg-slate-50 transition flex items-center gap-3">
+                            <i class="fas fa-calendar-alt text-mep-blue"></i>
+                            <span>Taller 2 (por completar)</span>
+                        </button>
+                        <button onclick="showWorkshop('taller3')" id="btn-taller3" class="workshop-btn p-4 text-left border-b hover:bg-slate-50 transition flex items-center gap-3">
+                            <i class="fas fa-calendar-plus text-mep-orange"></i>
+                            <span>Taller 3 (por completar)</span>
+                        </button>
+                        <button onclick="showWorkshop('taller4')" id="btn-taller4" class="workshop-btn p-4 text-left hover:bg-slate-50 transition flex items-center gap-3">
+                            <i class="fas fa-calendar-check text-mep-teal"></i>
+                            <span>Taller 4 (por completar)</span>
+                        </nav>
+                    </nav>
+                </div>
+            </aside>
 
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="border rounded-xl p-5 space-y-4">
-                            <h3 class="font-bold text-mep-teal border-b pb-2 text-mep-teal">Acciones del Mediador</h3>
-                            <ul class="space-y-3 text-sm">
-                                <li><i class="fas fa-check-circle text-teal-500 mr-2"></i> Presentación de asesores y regionales (solicitar levantar la mano).</li>
-                                <li><i class="fas fa-check-circle text-teal-500 mr-2"></i> Compartir enlace del <strong>Recurso Interactivo (RI)</strong>.</li>
-                                <li><i class="fas fa-check-circle text-teal-500 mr-2"></i> Explicar que el RI es la estación permanente de consulta.</li>
-                            </ul>
-                        </div>
-                        <div class="bg-slate-50 rounded-xl p-5">
-                            <h3 class="font-bold mb-3">Recursos Clave</h3>
-                            <div class="space-y-3">
-                                <button class="w-full text-left bg-white p-3 rounded border hover:shadow-sm flex justify-between items-center group">
-                                    <span>PPT Diapositivas 3, 4, 5 y 6</span>
-                                    <i class="fas fa-external-link-alt text-slate-400 group-hover:text-mep-teal"></i>
+            <!-- Workshop Content Area (Right column) -->
+            <section class="lg:w-3/4">
+
+                <!-- Taller 1: mantiene el contenido existente (incluye navegación interna) -->
+                <div id="taller1" class="workshop-content active">
+
+                    <!-- Sidebar Navigation (interna) - Ruta del Taller para Taller 1 -->
+                    <aside class="lg:w-full mb-6">
+                        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                            <div class="p-4 bg-slate-100 border-b border-slate-200">
+                                <h2 class="font-bold text-slate-600 uppercase text-xs tracking-wider">Ruta del Taller 1</h2>
+                            </div>
+                            <nav class="flex flex-col">
+                                <button onclick="showInternalTab('apertura')" id="btn-apertura" class="nav-btn p-4 text-left border-b hover:bg-slate-50 transition flex items-center gap-3">
+                                    <i class="fas fa-door-open text-mep-teal"></i>
+                                    <span>Apertura y Recursos</span>
                                 </button>
-                                <button class="w-full text-left bg-white p-3 rounded border hover:shadow-sm flex justify-between items-center group">
-                                    <span>Recurso Interactivo (Web)</span>
-                                    <i class="fas fa-laptop text-slate-400 group-hover:text-mep-teal"></i>
+                                <button onclick="showInternalTab('antecedentes')" id="btn-antecedentes" class="nav-btn p-4 text-left border-b hover:bg-slate-50 transition flex items-center gap-3">
+                                    <i class="fas fa-history text-mep-teal"></i>
+                                    <span>Antecedentes</span>
                                 </button>
-                            </div>
+                                <button onclick="showInternalTab('competencias')" id="btn-competencias" class="nav-btn p-4 text-left border-b hover:bg-slate-50 transition flex items-center gap-3">
+                                    <i class="fas fa-brain text-mep-teal"></i>
+                                    <span>Competencias</span>
+                                </button>
+                                <button onclick="showInternalTab('estructura')" id="btn-estructura" class="nav-btn p-4 text-left border-b hover:bg-slate-50 transition flex items-center gap-3">
+                                    <i class="fas fa-sitemap text-mep-teal"></i>
+                                    <span>Estructura Curricular</span>
+                                </button>
+                                <button onclick="showInternalTab('cierre')" id="btn-cierre" class="nav-btn p-4 text-left hover:bg-slate-50 transition flex items-center gap-3">
+                                    <i class="fas fa-flag-checkered text-mep-teal"></i>
+                                    <span>Cierre y Síntesis</span>
+                                </button>
+                            </nav>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </aside>
 
-            <!-- Tab: Antecedentes -->
-            <div id="antecedentes" class="tab-content space-y-6">
-                <div class="bg-white rounded-xl shadow-md p-8">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="p-3 bg-blue-100 rounded-lg text-blue-700"><i class="fas fa-clock-rotate-left fa-2x"></i></div>
-                        <div>
-                            <h2 class="text-2xl font-bold text-blue-900">Antecedentes: De dónde venimos</h2>
-                            <p class="text-slate-500 italic">"Para entender hacia dónde vamos, primero debemos reconocer desde dónde venimos."</p>
+                    <!-- Global Timer (para Taller 1) -->
+                    <div class="bg-white rounded-xl shadow-sm p-4 mb-6 flex justify-between items-center border border-slate-200">
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm font-semibold text-slate-500 uppercase">Sección actual:</span>
+                            <span id="section-name" class="font-bold text-mep-teal">Apertura</span>
                         </div>
-                    </div>
-
-                    <div class="space-y-6">
-                        <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
-                            <h3 class="font-bold text-blue-800 mb-2">Preguntas Detonadoras (Presentación Diap. 7)</h3>
-                            <div class="grid md:grid-cols-2 gap-4 text-sm">
-                                <div class="bg-white p-3 rounded shadow-sm">¿Qué se priorizó en 2023?</div>
-                                <div class="bg-white p-3 rounded shadow-sm">¿Qué se trabajó en 2024?</div>
-                                <div class="bg-white p-3 rounded shadow-sm">¿Qué se trabajó en 2025?</div>
-                                <div class="bg-white p-3 rounded shadow-sm font-bold text-mep-teal">¿Qué cambia en 2026?</div>
-                            </div>
-                        </div>
-
-                        <div class="p-4 border rounded-xl bg-slate-50">
-                            <p class="font-bold text-center italic text-slate-600">
-                                "Lo que cambia en el 2026 no es solo el qué, sino el cómo y el para qué"
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tab: Competencias -->
-            <div id="competencias" class="tab-content space-y-6">
-                <div class="bg-white rounded-xl shadow-md p-8">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="p-3 bg-purple-100 rounded-lg text-purple-700"><i class="fas fa-brain fa-2x"></i></div>
-                        <div>
-                            <h2 class="text-2xl font-bold text-purple-900">Enfoque por Competencias</h2>
-                            <p class="text-slate-500 italic">Saber, Saber Hacer, Saber Ser.</p>
-                        </div>
-                    </div>
-
-                    <div class="space-y-8">
-                        <!-- Liam Activity -->
-                        <div class="border-b pb-6">
-                            <h3 class="font-bold text-purple-800 mb-3 flex items-center gap-2">
-                                <i class="fas fa-video text-purple-800"></i> Historia: Liam y los tres regalos
-                            </h3>
-                            <p class="text-sm mb-4">Introducir video enfatizando que "La historia no habla de jardinería, habla de cómo aprendemos".</p>
-                            <div class="bg-slate-100 h-48 rounded-xl flex items-center justify-center border-2 border-dashed border-slate-300">
-                                <span class="text-slate-400 font-bold">[Espacio para Incrustar Video Diap. 10]</span>
-                            </div>
-                            <div class="mt-4 bg-purple-50 p-4 rounded-lg border border-purple-100">
-                                <p class="text-sm font-bold">Consigna de Chat:</p>
-                                <p class="text-sm italic">"Piense en su práctica diaria y comparta: ¿Qué simboliza cada regalo en nuestra labor docente?"</p>
-                            </div>
-                        </div>
-
-                        <!-- Games Activity -->
-                        <div>
-                            <h3 class="font-bold text-purple-800 mb-3 flex items-center gap-2">
-                                <i class="fas fa-gamepad text-purple-800"></i> Juegos de Infancia y el Padlet
-                            </h3>
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <div class="text-sm space-y-2">
-                                    <p>1. Preguntar por Trompos, Bolinchas o Jackses.</p>
-                                    <p>2. En el Padlet, completar las 3 columnas:</p>
-                                    <ul class="list-disc ml-5 font-semibold text-purple-700">
-                                        <li>Saber</li>
-                                        <li>Saber Hacer</li>
-                                        <li>Saber Ser</li>
-                                    </ul>
-                                </div>
-                                <div class="bg-purple-900 text-white p-4 rounded-xl flex flex-col justify-center items-center gap-3">
-                                    <span class="text-xs uppercase tracking-widest opacity-80">Link de Actividad</span>
-                                    <a href="https://padlet.com/albustor/clon-de-competencias-yamila-alberto-et67ccuqphiha21s" target="_blank" class="bg-white text-purple-900 px-4 py-2 rounded font-bold text-sm hover:bg-purple-100 transition">IR AL PADLET</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Menti -->
-                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 text-center">
-                            <h4 class="font-bold mb-4">Plenaria Inicial (Menti)</h4>
-                            <p class="text-sm mb-4">¿Cómo llevamos a la práctica el enfoque por competencias en el PNFT?</p>
-                            <div class="flex justify-center gap-4">
-                                <div class="p-3 bg-white shadow rounded">Código: <strong>8559 6841</strong></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tab: Estructura -->
-            <div id="estructura" class="tab-content space-y-6">
-                <div class="bg-white rounded-xl shadow-md p-8">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="p-3 bg-orange-100 rounded-lg text-orange-700"><i class="fas fa-layer-group fa-2x"></i></div>
-                        <div>
-                            <h2 class="text-2xl font-bold text-orange-900 text-orange-800">Estructura Curricular: Macro y Micro</h2>
-                            <p class="text-slate-500 italic">"Del Macro surge el sentido, del Micro nace la acción"</p>
-                        </div>
-                    </div>
-
-                    <!-- Macro vs Micro Definition -->
-                    <div class="grid md:grid-cols-2 gap-6 mb-8">
-                        <div class="bg-white p-5 rounded-xl shadow-sm macro-card space-y-3">
-                            <h3 class="font-bold text-mep-teal flex items-center gap-2">
-                                <i class="fas fa-eye text-mep-teal"></i> MACRO CURRÍCULO
-                            </h3>
-                            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Propósito: Orientar la visión general</p>
-                            <ul class="text-sm space-y-2 text-slate-700">
-                                <li><span class="font-bold">Sentido:</span> Define el QUÉ y el PARA QUÉ de la formación.</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Objeto de estudio (fundamento).</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Áreas de conocimiento.</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Competencias específicas del PNFT.</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Perfil de salida del estudiante.</li>
-                            </ul>
-                        </div>
-                        <div class="bg-white p-5 rounded-xl shadow-sm micro-card space-y-3">
-                            <h3 class="font-bold text-mep-orange flex items-center gap-2">
-                                <i class="fas fa-vial text-mep-orange"></i> MICRO CURRÍCULO
-                            </h3>
-                            <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Propósito: Concretar la implementación</p>
-                            <ul class="text-sm space-y-2 text-slate-700">
-                                <li><span class="font-bold">Acción:</span> Define el CÓMO y CUÁNDO en el aula.</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Resultados de Aprendizaje (RdA).</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Indicadores de logro.</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Módulos (unidades de aprendizaje).</li>
-                                <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Metodologías activas y Evaluación.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="space-y-6">
-                        <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-slate-400">
-                            <h4 class="font-bold text-sm mb-2 uppercase">Sinergia Curricular</h4>
-                            <p class="text-sm italic">"Los saberes sustentan los indicadores de logro, estos consolidan los RdA, y los RdA evidencian el progreso hacia las competencias específicas."</p>
-                        </div>
-
-                        <div class="border-l-4 border-orange-500 pl-4 space-y-2">
-                            <h3 class="font-bold uppercase text-xs text-slate-500 text-orange-800">Navegación Genially (RI 3b)</h3>
-                            <p class="text-sm">Enfatizar en: Objeto de estudio, Perfil, RdA y Metodologías Activas.</p>
-                            <div class="bg-red-50 p-3 rounded text-xs text-red-700 font-bold italic">
-                                REGLA DE MEDIACIÓN: NO profundizar aún en Indicadores, Evaluación o Módulos (estos se verán el Día 3).
-                            </div>
-                        </div>
-
-                        <div class="bg-slate-900 text-white p-6 rounded-xl flex justify-between items-center">
-                            <div>
-                                <h4 class="font-bold text-white">Actividad Lúdica Final</h4>
-                                <p class="text-sm opacity-80">Kahoot: Repaso de áreas, RdA y Macro/Micro</p>
-                            </div>
-                            <button class="bg-orange-500 px-6 py-2 rounded-lg font-bold hover:bg-orange-600 transition text-white">IR A KAHOOT</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tab: Cierre -->
-            <div id="cierre" class="tab-content space-y-6">
-                <div class="bg-white rounded-xl shadow-md p-8">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="p-3 bg-emerald-100 rounded-lg text-emerald-700"><i class="fas fa-check-double fa-2x"></i></div>
-                        <div>
-                            <h2 class="text-2xl font-bold text-emerald-900 text-emerald-800">Cierre General y Valoración</h2>
-                            <p class="text-slate-500 italic">"Comprender, planear y reflexionar para enseñar con sentido"</p>
-                        </div>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="space-y-4">
-                            <h3 class="font-bold border-b pb-2 text-emerald-900">Ideas de Síntesis</h3>
-                            <ul class="space-y-3 text-sm italic text-slate-700">
-                                <li>"Los resultados de aprendizaje dicen QUÉ lograr; los indicadores muestran CÓMO sabemos que se logró."</li>
-                                <li>"El módulo es la pieza articuladora que guía el trabajo del semestre."</li>
-                                <li>"Evaluación por competencias: integra saber, saber hacer y saber ser."</li>
-                            </ul>
-                        </div>
-                        <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-100 text-center flex flex-col justify-center gap-4">
-                            <h4 class="font-bold text-emerald-900">Registro de Asistencia</h4>
-                            <p class="text-xs text-slate-600">Formulario obligatorio de valoración (SEA / Instrumento Feb 2026).</p>
-                            <button class="bg-emerald-600 text-white py-3 rounded-lg font-bold hover:bg-emerald-700 transition text-white">
-                                <i class="fas fa-clipboard-list mr-2 text-white"></i> ABRIR FORMULARIO
+                        <div class="flex items-center gap-3">
+                            <div id="timer-display" class="text-2xl font-mono font-bold text-slate-700">10:00</div>
+                            <button onclick="toggleTimer()" id="timer-btn" class="bg-slate-800 text-white px-4 py-2 rounded-lg hover:bg-slate-700 transition">
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <button onclick="resetTimer()" class="bg-slate-200 text-slate-600 px-4 py-2 rounded-lg hover:bg-slate-300 transition">
+                                <i class="fas fa-undo"></i>
                             </button>
                         </div>
                     </div>
-                </div>
-            </div>
 
-        </section>
+                    <!-- Tab: Apertura -->
+                    <div id="apertura" class="tab-content active space-y-6">
+                        <div class="bg-white rounded-xl shadow-md p-8">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="p-3 bg-teal-100 rounded-lg text-mep-teal"><i class="fas fa-handshake fa-2x"></i></div>
+                                <div>
+                                    <h2 class="text-2xl font-bold">A. Apertura y Recursos</h2>
+                                    <p class="text-slate-500 italic">Objetivo: Comprender la evolución y consolidación del macro y micro currículo del PNFT.</p>
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="border rounded-xl p-5 space-y-4">
+                                    <h3 class="font-bold text-mep-teal border-b pb-2 text-mep-teal">Acciones del Mediador</h3>
+                                    <ul class="space-y-3 text-sm">
+                                        <li><i class="fas fa-check-circle text-teal-500 mr-2"></i> Presentación de asesores y regionales (solicitar levantar la mano).</li>
+                                        <li><i class="fas fa-check-circle text-teal-500 mr-2"></i> Compartir enlace del <strong>Recurso Interactivo (RI)</strong>.</li>
+                                        <li><i class="fas fa-check-circle text-teal-500 mr-2"></i> Explicar que el RI es la estación permanente de consulta.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-slate-50 rounded-xl p-5">
+                                    <h3 class="font-bold mb-3">Recursos Clave</h3>
+                                    <div class="space-y-3">
+                                        <button class="w-full text-left bg-white p-3 rounded border hover:shadow-sm flex justify-between items-center group">
+                                            <span>PPT Diapositivas 3, 4, 5 y 6</span>
+                                            <i class="fas fa-external-link-alt text-slate-400 group-hover:text-mep-teal"></i>
+                                        </button>
+                                        <button class="w-full text-left bg-white p-3 rounded border hover:shadow-sm flex justify-between items-center group">
+                                            <span>Recurso Interactivo (Web)</span>
+                                            <i class="fas fa-laptop text-slate-400 group-hover:text-mep-teal"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Antecedentes -->
+                    <div id="antecedentes" class="tab-content space-y-6">
+                        <div class="bg-white rounded-xl shadow-md p-8">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="p-3 bg-blue-100 rounded-lg text-blue-700"><i class="fas fa-clock-rotate-left fa-2x"></i></div>
+                                <div>
+                                    <h2 class="text-2xl font-bold text-blue-900">Antecedentes: De dónde venimos</h2>
+                                    <p class="text-slate-500 italic">"Para entender hacia dónde vamos, primero debemos reconocer desde dónde venimos."</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+                                    <h3 class="font-bold text-blue-800 mb-2">Preguntas Detonadoras (Presentación Diap. 7)</h3>
+                                    <div class="grid md:grid-cols-2 gap-4 text-sm">
+                                        <div class="bg-white p-3 rounded shadow-sm">¿Qué se priorizó en 2023?</div>
+                                        <div class="bg-white p-3 rounded shadow-sm">¿Qué se trabajó en 2024?</div>
+                                        <div class="bg-white p-3 rounded shadow-sm">¿Qué se trabajó en 2025?</div>
+                                        <div class="bg-white p-3 rounded shadow-sm font-bold text-mep-teal">¿Qué cambia en 2026?</div>
+                                    </div>
+                                </div>
+
+                                <div class="p-4 border rounded-xl bg-slate-50">
+                                    <p class="font-bold text-center italic text-slate-600">
+                                        "Lo que cambia en el 2026 no es solo el qué, sino el cómo y el para qué"
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Competencias -->
+                    <div id="competencias" class="tab-content space-y-6">
+                        <div class="bg-white rounded-xl shadow-md p-8">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="p-3 bg-purple-100 rounded-lg text-purple-700"><i class="fas fa-brain fa-2x"></i></div>
+                                <div>
+                                    <h2 class="text-2xl font-bold text-purple-900">Enfoque por Competencias</h2>
+                                    <p class="text-slate-500 italic">Saber, Saber Hacer, Saber Ser.</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-8">
+                                <!-- Liam Activity -->
+                                <div class="border-b pb-6">
+                                    <h3 class="font-bold text-purple-800 mb-3 flex items-center gap-2">
+                                        <i class="fas fa-video text-purple-800"></i> Historia: Liam y los tres regalos
+                                    </h3>
+                                    <p class="text-sm mb-4">Introducir video enfatizando que "La historia no habla de jardinería, habla de cómo aprendemos".</p>
+                                    <div class="bg-slate-100 h-48 rounded-xl flex items-center justify-center border-2 border-dashed border-slate-300">
+                                        <span class="text-slate-400 font-bold">[Espacio para Incrustar Video Diap. 10]</span>
+                                    </div>
+                                    <div class="mt-4 bg-purple-50 p-4 rounded-lg border border-purple-100">
+                                        <p class="text-sm font-bold">Consigna de Chat:</p>
+                                        <p class="text-sm italic">"Piense en su práctica diaria y comparta: ¿Qué simboliza cada regalo en nuestra labor docente?"</p>
+                                    </div>
+                                </div>
+
+                                <!-- Games Activity -->
+                                <div>
+                                    <h3 class="font-bold text-purple-800 mb-3 flex items-center gap-2">
+                                        <i class="fas fa-gamepad text-purple-800"></i> Juegos de Infancia y el Padlet
+                                    </h3>
+                                    <div class="grid md:grid-cols-2 gap-4">
+                                        <div class="text-sm space-y-2">
+                                            <p>1. Preguntar por Trompos, Bolinchas o Jackses.</p>
+                                            <p>2. En el Padlet, completar las 3 columnas:</p>
+                                            <ul class="list-disc ml-5 font-semibold text-purple-700">
+                                                <li>Saber</li>
+                                                <li>Saber Hacer</li>
+                                                <li>Saber Ser</li>
+                                            </ul>
+                                        </div>
+                                        <div class="bg-purple-900 text-white p-4 rounded-xl flex flex-col justify-center items-center gap-3">
+                                            <span class="text-xs uppercase tracking-widest opacity-80">Link de Actividad</span>
+                                            <a href="https://padlet.com/albustor/clon-de-competencias-yamila-alberto-et67ccuqphiha21s" target="_blank" class="bg-white text-purple-900 px-4 py-2 rounded font-bold text-sm hover:bg-purple-100 transition">IR AL PADLET</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Menti -->
+                                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 text-center">
+                                    <h4 class="font-bold mb-4">Plenaria Inicial (Menti)</h4>
+                                    <p class="text-sm mb-4">¿Cómo llevamos a la práctica el enfoque por competencias en el PNFT?</p>
+                                    <div class="flex justify-center gap-4">
+                                        <div class="p-3 bg-white shadow rounded">Código: <strong>8559 6841</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Estructura -->
+                    <div id="estructura" class="tab-content space-y-6">
+                        <div class="bg-white rounded-xl shadow-md p-8">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="p-3 bg-orange-100 rounded-lg text-orange-700"><i class="fas fa-layer-group fa-2x"></i></div>
+                                <div>
+                                    <h2 class="text-2xl font-bold text-orange-900 text-orange-800">Estructura Curricular: Macro y Micro</h2>
+                                    <p class="text-slate-500 italic">"Del Macro surge el sentido, del Micro nace la acción"</p>
+                                </div>
+                            </div>
+
+                            <!-- Macro vs Micro Definition -->
+                            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                                <div class="bg-white p-5 rounded-xl shadow-sm macro-card space-y-3">
+                                    <h3 class="font-bold text-mep-teal flex items-center gap-2">
+                                        <i class="fas fa-eye text-mep-teal"></i> MACRO CURRÍCULO
+                                    </h3>
+                                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Propósito: Orientar la visión general</p>
+                                    <ul class="text-sm space-y-2 text-slate-700">
+                                        <li><span class="font-bold">Sentido:</span> Define el QUÉ y el PARA QUÉ de la formación.</li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Objeto de estudio (fundamento).</li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Áreas de conocimiento.</li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Competencias específicas del PNFT.</li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Perfil de salida del estudiante.</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-white p-5 rounded-xl shadow-sm micro-card space-y-3">
+                                    <h3 class="font-bold text-mep-orange flex items-center gap-2">
+                                        <i class="fas fa-vial text-mep-orange"></i> MICRO CURRÍCULO
+                                    </h3>
+                                    <p class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Propósito: Concretar la implementación</p>
+                                    <ul class="text-sm space-y-2 text-slate-700">
+                                        <li><span class="font-bold">Acción:</span> Define el CÓMO y CUÁNDO en el aula.</li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Resultados de Aprendizaje (RdA).</li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Indicadores de logro.</li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Módulos (unidades de aprendizaje).</li>
+                                        <li class="flex items-start gap-2"><i class="fas fa-circle text-[6px] mt-2"></i> Metodologías activas y Evaluación.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="space-y-6">
+                                <div class="bg-slate-50 p-4 rounded-lg border-l-4 border-slate-400">
+                                    <h4 class="font-bold text-sm mb-2 uppercase">Sinergia Curricular</h4>
+                                    <p class="text-sm italic">"Los saberes sustentan los indicadores de logro, estos consolidan los RdA, y los RdA evidencian el progreso hacia las competencias específicas."</p>
+                                </div>
+
+                                <div class="border-l-4 border-orange-500 pl-4 space-y-2">
+                                    <h3 class="font-bold uppercase text-xs text-slate-500 text-orange-800">Navegación Genially (RI 3b)</h3>
+                                    <p class="text-sm">Enfatizar en: Objeto de estudio, Perfil, RdA y Metodologías Activas.</p>
+                                    <div class="bg-red-50 p-3 rounded text-xs text-red-700 font-bold italic">
+                                        REGLA DE MEDIACIÓN: NO profundizar aún en Indicadores, Evaluación o Módulos (estos se verán el Día 3).
+                                    </div>
+                                </div>
+
+                                <div class="bg-slate-900 text-white p-6 rounded-xl flex justify-between items-center">
+                                    <div>
+                                        <h4 class="font-bold text-white">Actividad Lúdica Final</h4>
+                                        <p class="text-sm opacity-80">Kahoot: Repaso de áreas, RdA y Macro/Micro</p>
+                                    </div>
+                                    <button class="bg-orange-500 px-6 py-2 rounded-lg font-bold hover:bg-orange-600 transition text-white">IR A KAHOOT</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tab: Cierre -->
+                    <div id="cierre" class="tab-content space-y-6">
+                        <div class="bg-white rounded-xl shadow-md p-8">
+                            <div class="flex items-center gap-4 mb-6">
+                                <div class="p-3 bg-emerald-100 rounded-lg text-emerald-700"><i class="fas fa-check-double fa-2x"></i></div>
+                                <div>
+                                    <h2 class="text-2xl font-bold text-emerald-900 text-emerald-800">Cierre General y Valoración</h2>
+                                    <p class="text-slate-500 italic">"Comprender, planear y reflexionar para enseñar con sentido"</p>
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div class="space-y-4">
+                                    <h3 class="font-bold border-b pb-2 text-emerald-900">Ideas de Síntesis</h3>
+                                    <ul class="space-y-3 text-sm italic text-slate-700">
+                                        <li>"Los resultados de aprendizaje dicen QUÉ lograr; los indicadores muestran CÓMO sabemos que se logró."</li>
+                                        <li>"El módulo es la pieza articuladora que guía el trabajo del semestre."</li>
+                                        <li>"Evaluación por competencias: integra saber, saber hacer y saber ser."</li>
+                                    </ul>
+                                </div>
+                                <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-100 text-center flex flex-col justify-center gap-4">
+                                    <h4 class="font-bold text-emerald-900">Registro de Asistencia</h4>
+                                    <p class="text-xs text-slate-600">Formulario obligatorio de valoración (SEA / Instrumento Feb 2026).</p>
+                                    <button class="bg-emerald-600 text-white py-3 rounded-lg font-bold hover:bg-emerald-700 transition text-white">
+                                        <i class="fas fa-clipboard-list mr-2 text-white"></i> ABRIR FORMULARIO
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Taller 2 placeholder -->
+                <div id="taller2" class="workshop-content">
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <h2 class="text-2xl font-bold mb-3">Taller 2 — Contenido por completar</h2>
+                        <p class="text-slate-600 italic mb-4">Espacio reservado para completar los contenidos del Taller 2 durante esta semana de estudio.</p>
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                            <p class="text-sm">Añadir estructura: objetivos, recursos, actividades y materiales. (Por completar)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Taller 3 placeholder -->
+                <div id="taller3" class="workshop-content">
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <h2 class="text-2xl font-bold mb-3">Taller 3 — Contenido por completar</h2>
+                        <p class="text-slate-600 italic mb-4">Espacio reservado para completar los contenidos del Taller 3 durante esta semana de estudio.</p>
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                            <p class="text-sm">Añadir estructura: objetivos, recursos, actividades y materiales. (Por completar)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Taller 4 placeholder -->
+                <div id="taller4" class="workshop-content">
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <h2 class="text-2xl font-bold mb-3">Taller 4 — Contenido por completar</h2>
+                        <p class="text-slate-600 italic mb-4">Espacio reservado para completar los contenidos del Taller 4 durante esta semana de estudio.</p>
+                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
+                            <p class="text-sm">Añadir estructura: objetivos, recursos, actividades y materiales. (Por completar)</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+
     </main>
 
     <!-- Footer Status -->
@@ -344,20 +416,55 @@
     </footer>
 
     <script>
-        // Tab Management
-        function showTab(tabId) {
-            // Hide all tabs
-            document.querySelectorAll('.tab-content').forEach(tab => {
+        // Workshop (top-level) Management
+        function showWorkshop(workshopId) {
+            // Hide all workshops
+            document.querySelectorAll('.workshop-content').forEach(w => w.classList.remove('active'));
+            // Show selected workshop
+            document.getElementById(workshopId).classList.add('active');
+
+            // Update workshop buttons
+            document.querySelectorAll('.workshop-btn').forEach(btn => btn.classList.remove('step-active'));
+            const activeBtn = document.getElementById('btn-' + workshopId);
+            if (activeBtn) activeBtn.classList.add('step-active');
+
+            // If showing Taller 1, initialize its internal tab and timer
+            if (workshopId === 'taller1') {
+                showInternalTab('apertura');
+                setTimerMinutes(15); // default minutes for Apertura in Taller 1
+            } else {
+                // For placeholders, reset timer display and section name
+                document.getElementById('section-name') && (document.getElementById('section-name').innerText = workshopTitle(workshopId));
+                setTimerMinutes(0);
+            }
+        }
+
+        function workshopTitle(id) {
+            const names = {
+                'taller1': 'Taller 1',
+                'taller2': 'Taller 2',
+                'taller3': 'Taller 3',
+                'taller4': 'Taller 4'
+            };
+            return names[id] || '';
+        }
+
+        // Internal Tab Management (for Taller 1)
+        function showInternalTab(tabId) {
+            // Hide all internal tabs
+            document.querySelectorAll('#taller1 .tab-content').forEach(tab => {
                 tab.classList.remove('active');
             });
-            // Show selected tab
-            document.getElementById(tabId).classList.add('active');
+            // Show selected internal tab
+            const el = document.getElementById(tabId);
+            if (el) el.classList.add('active');
 
-            // Update nav buttons
-            document.querySelectorAll('.nav-btn').forEach(btn => {
+            // Update nav buttons (internal)
+            document.querySelectorAll('#taller1 .nav-btn').forEach(btn => {
                 btn.classList.remove('step-active');
             });
-            document.getElementById('btn-' + tabId).classList.add('step-active');
+            const btn = document.getElementById('btn-' + tabId);
+            if (btn) btn.classList.add('step-active');
 
             // Update section name in timer header
             const names = {
@@ -367,9 +474,11 @@
                 'estructura': 'Estructura Curricular',
                 'cierre': 'Cierre y Valoración'
             };
-            document.getElementById('section-name').innerText = names[tabId];
+            if (document.getElementById('section-name')) {
+                document.getElementById('section-name').innerText = names[tabId] || 'Taller 1';
+            }
 
-            // Set specific times from mediator guide
+            // Set specific times from mediator guide (minutes) for each internal tab
             const times = {
                 'apertura': 15,
                 'antecedentes': 5,
@@ -377,38 +486,42 @@
                 'estructura': 45,
                 'cierre': 15
             };
-            setTimerMinutes(times[tabId]);
+            setTimerMinutes(times[tabId] || 0);
         }
 
-        // Timer Logic
-        let timeLeft = 600; 
+        // Timer Logic (shared, shown for Taller 1)
+        let timeLeft = 0;
         let timerId = null;
 
         function setTimerMinutes(min) {
-            timeLeft = min * 60;
+            timeLeft = (min && min > 0) ? min * 60 : 0;
             updateDisplay();
-            if(timerId) {
+            if (timerId) {
                 clearInterval(timerId);
                 timerId = null;
-                document.getElementById('timer-btn').innerHTML = '<i class="fas fa-play"></i>';
+                const btn = document.getElementById('timer-btn');
+                if (btn) btn.innerHTML = '<i class="fas fa-play"></i>';
             }
         }
 
         function updateDisplay() {
+            const displayEl = document.getElementById('timer-display');
+            if (!displayEl) return;
             const min = Math.floor(timeLeft / 60);
             const sec = timeLeft % 60;
             const display = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
-            document.getElementById('timer-display').innerText = display;
+            displayEl.innerText = display;
             
-            if (timeLeft <= 60) {
-                document.getElementById('timer-display').classList.add('text-red-600', 'timer-flash');
+            if (timeLeft <= 60 && timeLeft > 0) {
+                displayEl.classList.add('text-red-600', 'timer-flash');
             } else {
-                document.getElementById('timer-display').classList.remove('text-red-600', 'timer-flash');
+                displayEl.classList.remove('text-red-600', 'timer-flash');
             }
         }
 
         function toggleTimer() {
             const btn = document.getElementById('timer-btn');
+            if (!btn) return;
             if (timerId) {
                 clearInterval(timerId);
                 timerId = null;
@@ -429,7 +542,7 @@
         }
 
         function resetTimer() {
-            if(timerId) {
+            if (timerId) {
                 clearInterval(timerId);
                 timerId = null;
                 document.getElementById('timer-btn').innerHTML = '<i class="fas fa-play text-white"></i>';
@@ -437,8 +550,9 @@
             updateDisplay();
         }
 
+        // Initial load
         window.onload = () => {
-            showTab('apertura');
+            showWorkshop('taller1');
         };
     </script>
 </body>
