@@ -42,6 +42,19 @@
         /* Workshop-level visibility */
         .workshop-content { display: none; }
         .workshop-content.active { display: block; }
+
+        .resumen-area {
+            width: 100%;
+            min-height: 90px;
+            resize: vertical;
+            padding: 0.5rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 0.5rem;
+            background: #ffffff;
+        }
+
+        .resumen-card { background: #ffffff; border: 1px solid #e6edf2; padding: 1rem; border-radius: 0.75rem; }
+        .small-muted { font-size: 0.8rem; color: #6b7280; }
     </style>
 </head>
 <body class="text-slate-800">
@@ -85,7 +98,7 @@
                         <button onclick="showWorkshop('taller4')" id="btn-taller4" class="workshop-btn p-4 text-left hover:bg-slate-50 transition flex items-center gap-3">
                             <i class="fas fa-calendar-check text-mep-teal"></i>
                             <span>Taller 4 (por completar)</span>
-                        </nav>
+                        </button>
                     </nav>
                 </div>
             </aside>
@@ -178,6 +191,18 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Resumen específico de Apertura -->
+                            <div class="mt-6 resumen-card">
+                                <label class="font-semibold">Resumen - Apertura</label>
+                                <p class="small-muted mb-2">Escribe un breve resumen o notas sobre la apertura.</p>
+                                <textarea id="resumen_taller1_apertura" class="resumen-area" placeholder="Escribe aquí tu resumen..."></textarea>
+                                <div class="mt-3 flex gap-2">
+                                    <button class="bg-mep-teal text-white px-3 py-1 rounded" onclick="saveSummary('taller1','apertura')"><i class="fas fa-save mr-2"></i>Guardar</button>
+                                    <button class="bg-slate-200 px-3 py-1 rounded" onclick="clearSummary('taller1','apertura')"><i class="fas fa-trash mr-2"></i>Borrar</button>
+                                    <span id="count_taller1_apertura" class="small-muted ml-auto"></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -207,6 +232,18 @@
                                     <p class="font-bold text-center italic text-slate-600">
                                         "Lo que cambia en el 2026 no es solo el qué, sino el cómo y el para qué"
                                     </p>
+                                </div>
+
+                                <!-- Resumen específico de Antecedentes -->
+                                <div class="resumen-card">
+                                    <label class="font-semibold">Resumen - Antecedentes</label>
+                                    <p class="small-muted mb-2">Notas clave sobre antecedentes.</p>
+                                    <textarea id="resumen_taller1_antecedentes" class="resumen-area" placeholder="Escribe aquí tu resumen..."></textarea>
+                                    <div class="mt-3 flex gap-2">
+                                        <button class="bg-mep-teal text-white px-3 py-1 rounded" onclick="saveSummary('taller1','antecedentes')"><i class="fas fa-save mr-2"></i>Guardar</button>
+                                        <button class="bg-slate-200 px-3 py-1 rounded" onclick="clearSummary('taller1','antecedentes')"><i class="fas fa-trash mr-2"></i>Borrar</button>
+                                        <span id="count_taller1_antecedentes" class="small-muted ml-auto"></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -261,12 +298,15 @@
                                     </div>
                                 </div>
 
-                                <!-- Menti -->
-                                <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 text-center">
-                                    <h4 class="font-bold mb-4">Plenaria Inicial (Menti)</h4>
-                                    <p class="text-sm mb-4">¿Cómo llevamos a la práctica el enfoque por competencias en el PNFT?</p>
-                                    <div class="flex justify-center gap-4">
-                                        <div class="p-3 bg-white shadow rounded">Código: <strong>8559 6841</strong></div>
+                                <!-- Resumen específico de Competencias -->
+                                <div class="resumen-card">
+                                    <label class="font-semibold">Resumen - Competencias</label>
+                                    <p class="small-muted mb-2">Notas y aprendizajes sobre el enfoque por competencias.</p>
+                                    <textarea id="resumen_taller1_competencias" class="resumen-area" placeholder="Escribe aquí tu resumen..."></textarea>
+                                    <div class="mt-3 flex gap-2">
+                                        <button class="bg-mep-teal text-white px-3 py-1 rounded" onclick="saveSummary('taller1','competencias')"><i class="fas fa-save mr-2"></i>Guardar</button>
+                                        <button class="bg-slate-200 px-3 py-1 rounded" onclick="clearSummary('taller1','competencias')"><i class="fas fa-trash mr-2"></i>Borrar</button>
+                                        <span id="count_taller1_competencias" class="small-muted ml-auto"></span>
                                     </div>
                                 </div>
                             </div>
@@ -335,6 +375,18 @@
                                     </div>
                                     <button class="bg-orange-500 px-6 py-2 rounded-lg font-bold hover:bg-orange-600 transition text-white">IR A KAHOOT</button>
                                 </div>
+
+                                <!-- Resumen específico de Estructura -->
+                                <div class="resumen-card">
+                                    <label class="font-semibold">Resumen - Estructura Curricular</label>
+                                    <p class="small-muted mb-2">Observaciones sobre macro y micro currículo.</p>
+                                    <textarea id="resumen_taller1_estructura" class="resumen-area" placeholder="Escribe aquí tu resumen..."></textarea>
+                                    <div class="mt-3 flex gap-2">
+                                        <button class="bg-mep-teal text-white px-3 py-1 rounded" onclick="saveSummary('taller1','estructura')"><i class="fas fa-save mr-2"></i>Guardar</button>
+                                        <button class="bg-slate-200 px-3 py-1 rounded" onclick="clearSummary('taller1','estructura')"><i class="fas fa-trash mr-2"></i>Borrar</button>
+                                        <span id="count_taller1_estructura" class="small-muted ml-auto"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -343,217 +395,4 @@
                     <div id="cierre" class="tab-content space-y-6">
                         <div class="bg-white rounded-xl shadow-md p-8">
                             <div class="flex items-center gap-4 mb-6">
-                                <div class="p-3 bg-emerald-100 rounded-lg text-emerald-700"><i class="fas fa-check-double fa-2x"></i></div>
-                                <div>
-                                    <h2 class="text-2xl font-bold text-emerald-900 text-emerald-800">Cierre General y Valoración</h2>
-                                    <p class="text-slate-500 italic">"Comprender, planear y reflexionar para enseñar con sentido"</p>
-                                </div>
-                            </div>
-
-                            <div class="grid md:grid-cols-2 gap-6">
-                                <div class="space-y-4">
-                                    <h3 class="font-bold border-b pb-2 text-emerald-900">Ideas de Síntesis</h3>
-                                    <ul class="space-y-3 text-sm italic text-slate-700">
-                                        <li>"Los resultados de aprendizaje dicen QUÉ lograr; los indicadores muestran CÓMO sabemos que se logró."</li>
-                                        <li>"El módulo es la pieza articuladora que guía el trabajo del semestre."</li>
-                                        <li>"Evaluación por competencias: integra saber, saber hacer y saber ser."</li>
-                                    </ul>
-                                </div>
-                                <div class="bg-emerald-50 p-6 rounded-xl border border-emerald-100 text-center flex flex-col justify-center gap-4">
-                                    <h4 class="font-bold text-emerald-900">Registro de Asistencia</h4>
-                                    <p class="text-xs text-slate-600">Formulario obligatorio de valoración (SEA / Instrumento Feb 2026).</p>
-                                    <button class="bg-emerald-600 text-white py-3 rounded-lg font-bold hover:bg-emerald-700 transition text-white">
-                                        <i class="fas fa-clipboard-list mr-2 text-white"></i> ABRIR FORMULARIO
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- Taller 2 placeholder -->
-                <div id="taller2" class="workshop-content">
-                    <div class="bg-white rounded-xl shadow-md p-8">
-                        <h2 class="text-2xl font-bold mb-3">Taller 2 — Contenido por completar</h2>
-                        <p class="text-slate-600 italic mb-4">Espacio reservado para completar los contenidos del Taller 2 durante esta semana de estudio.</p>
-                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                            <p class="text-sm">Añadir estructura: objetivos, recursos, actividades y materiales. (Por completar)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Taller 3 placeholder -->
-                <div id="taller3" class="workshop-content">
-                    <div class="bg-white rounded-xl shadow-md p-8">
-                        <h2 class="text-2xl font-bold mb-3">Taller 3 — Contenido por completar</h2>
-                        <p class="text-slate-600 italic mb-4">Espacio reservado para completar los contenidos del Taller 3 durante esta semana de estudio.</p>
-                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                            <p class="text-sm">Añadir estructura: objetivos, recursos, actividades y materiales. (Por completar)</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Taller 4 placeholder -->
-                <div id="taller4" class="workshop-content">
-                    <div class="bg-white rounded-xl shadow-md p-8">
-                        <h2 class="text-2xl font-bold mb-3">Taller 4 — Contenido por completar</h2>
-                        <p class="text-slate-600 italic mb-4">Espacio reservado para completar los contenidos del Taller 4 durante esta semana de estudio.</p>
-                        <div class="bg-slate-50 p-6 rounded-xl border border-slate-200">
-                            <p class="text-sm">Añadir estructura: objetivos, recursos, actividades y materiales. (Por completar)</p>
-                        </div>
-                    </div>
-                </div>
-
-            </section>
-        </div>
-
-    </main>
-
-    <!-- Footer Status -->
-    <footer class="fixed bottom-0 left-0 w-full bg-slate-100 border-t border-slate-200 p-2 text-center text-xs text-slate-500 z-50">
-        Alberto Bustos & Yamila Abraham | Formación Permanente Febrero 2026 | DIDI-DRTE-MEP
-    </footer>
-
-    <script>
-        // Workshop (top-level) Management
-        function showWorkshop(workshopId) {
-            // Hide all workshops
-            document.querySelectorAll('.workshop-content').forEach(w => w.classList.remove('active'));
-            // Show selected workshop
-            document.getElementById(workshopId).classList.add('active');
-
-            // Update workshop buttons
-            document.querySelectorAll('.workshop-btn').forEach(btn => btn.classList.remove('step-active'));
-            const activeBtn = document.getElementById('btn-' + workshopId);
-            if (activeBtn) activeBtn.classList.add('step-active');
-
-            // If showing Taller 1, initialize its internal tab and timer
-            if (workshopId === 'taller1') {
-                showInternalTab('apertura');
-                setTimerMinutes(15); // default minutes for Apertura in Taller 1
-            } else {
-                // For placeholders, reset timer display and section name
-                document.getElementById('section-name') && (document.getElementById('section-name').innerText = workshopTitle(workshopId));
-                setTimerMinutes(0);
-            }
-        }
-
-        function workshopTitle(id) {
-            const names = {
-                'taller1': 'Taller 1',
-                'taller2': 'Taller 2',
-                'taller3': 'Taller 3',
-                'taller4': 'Taller 4'
-            };
-            return names[id] || '';
-        }
-
-        // Internal Tab Management (for Taller 1)
-        function showInternalTab(tabId) {
-            // Hide all internal tabs
-            document.querySelectorAll('#taller1 .tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            // Show selected internal tab
-            const el = document.getElementById(tabId);
-            if (el) el.classList.add('active');
-
-            // Update nav buttons (internal)
-            document.querySelectorAll('#taller1 .nav-btn').forEach(btn => {
-                btn.classList.remove('step-active');
-            });
-            const btn = document.getElementById('btn-' + tabId);
-            if (btn) btn.classList.add('step-active');
-
-            // Update section name in timer header
-            const names = {
-                'apertura': 'Apertura y Recursos',
-                'antecedentes': 'Antecedentes',
-                'competencias': 'Competencias',
-                'estructura': 'Estructura Curricular',
-                'cierre': 'Cierre y Valoración'
-            };
-            if (document.getElementById('section-name')) {
-                document.getElementById('section-name').innerText = names[tabId] || 'Taller 1';
-            }
-
-            // Set specific times from mediator guide (minutes) for each internal tab
-            const times = {
-                'apertura': 15,
-                'antecedentes': 5,
-                'competencias': 40,
-                'estructura': 45,
-                'cierre': 15
-            };
-            setTimerMinutes(times[tabId] || 0);
-        }
-
-        // Timer Logic (shared, shown for Taller 1)
-        let timeLeft = 0;
-        let timerId = null;
-
-        function setTimerMinutes(min) {
-            timeLeft = (min && min > 0) ? min * 60 : 0;
-            updateDisplay();
-            if (timerId) {
-                clearInterval(timerId);
-                timerId = null;
-                const btn = document.getElementById('timer-btn');
-                if (btn) btn.innerHTML = '<i class="fas fa-play"></i>';
-            }
-        }
-
-        function updateDisplay() {
-            const displayEl = document.getElementById('timer-display');
-            if (!displayEl) return;
-            const min = Math.floor(timeLeft / 60);
-            const sec = timeLeft % 60;
-            const display = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
-            displayEl.innerText = display;
-            
-            if (timeLeft <= 60 && timeLeft > 0) {
-                displayEl.classList.add('text-red-600', 'timer-flash');
-            } else {
-                displayEl.classList.remove('text-red-600', 'timer-flash');
-            }
-        }
-
-        function toggleTimer() {
-            const btn = document.getElementById('timer-btn');
-            if (!btn) return;
-            if (timerId) {
-                clearInterval(timerId);
-                timerId = null;
-                btn.innerHTML = '<i class="fas fa-play text-white"></i>';
-            } else {
-                if (timeLeft <= 0) return;
-                timerId = setInterval(() => {
-                    timeLeft--;
-                    updateDisplay();
-                    if (timeLeft <= 0) {
-                        clearInterval(timerId);
-                        timerId = null;
-                        btn.innerHTML = '<i class="fas fa-play text-white"></i>';
-                    }
-                }, 1000);
-                btn.innerHTML = '<i class="fas fa-pause text-white"></i>';
-            }
-        }
-
-        function resetTimer() {
-            if (timerId) {
-                clearInterval(timerId);
-                timerId = null;
-                document.getElementById('timer-btn').innerHTML = '<i class="fas fa-play text-white"></i>';
-            }
-            updateDisplay();
-        }
-
-        // Initial load
-        window.onload = () => {
-            showWorkshop('taller1');
-        };
-    </script>
-</body>
-</html>
+                                <div class="p-3 bg-emerald-100 rounded-lg text-emerald-700"><i class="fas fa-check-double*
